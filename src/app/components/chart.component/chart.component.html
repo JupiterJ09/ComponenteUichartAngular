@@ -1,0 +1,36 @@
+<div class="chart-container">
+
+    <h2>Grafica de Acciones de una corporacion</h2>
+    <div class="chart-wrapper">
+        <canvas baseChart
+        [data]="lineChartData"
+        [options]="lineChartOptions"
+        [legend]="lineChartLegend"
+        type="line">
+    </canvas>
+    </div>
+</div>
+
+<div class="table-container">
+
+    <h2>Tabla de los Datos</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Valor Apertura</th>
+                <th>Valor Cierre</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let accion of datosAcciones">
+                <td>{{accion.date}}</td>
+                <td>{{accion.open}}</td>
+                <td>{{accion.close}}</td>
+
+            </tr>
+        </tbody>
+    </table>
+
+</div>
